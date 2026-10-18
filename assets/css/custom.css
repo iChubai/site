@@ -1,0 +1,795 @@
+.entry-header .header-title-wrap h1 { color: #fff !important; }
+.entry-header .header-title-wrap h2 { color: #fff !important; }
+
+/* Fix header styling */
+.header-title-wrap h1 { color: #fff !important; }
+.header-title-wrap h2 { color: #fff !important; }
+
+/* Main content layout */
+#main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 2em;
+}
+
+/* Post styles */
+.hentry {
+    margin-bottom: 3em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2em;
+}
+
+.hentry:last-child {
+    border-bottom: none;
+}
+
+/* Typography updates */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Entry image adjustments */
+.entry-image-index img {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.entry-image-index img:hover {
+    transform: translateY(-5px);
+}
+
+.entry-title a {
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.entry-title a:hover {
+    color: #007bff;
+}
+
+.entry-meta {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.entry-meta a {
+    color: #888;
+    text-decoration: none;
+}
+
+.entry-meta a:hover {
+    color: #007bff;
+}
+
+/* Read more button */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #222;
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-top: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+    color: #fff !important;
+    border-bottom: none !important;
+}
+
+/* HPSTR numbers headings (1. / 1.1.). Blog posts keep them, matching the HPSTR post template.
+   About/research/software have h3s with no parent h2, so they would all become "0.1." */
+body:not(#post) .entry-content h2:before,
+body:not(#post) .entry-content h3:before,
+body:not(#post) .entry-content h4:before,
+body:not(#post) .entry-content h5:before,
+body:not(#post) .entry-content h6:before {
+    content: none;
+    counter-increment: none;
+}
+
+/* Menu submenu list items fix */
+.dl-menuwrapper li .dl-submenu li {
+    padding: 0;
+}
+
+.dl-menuwrapper li .dl-submenu li h4 {
+    margin: 8px 0 2px;
+    padding: 0 16px;
+    font-size: 1.05em;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.dl-menuwrapper li .dl-submenu li p {
+    margin: 0;
+    padding: 0 16px 10px;
+    font-size: 0.78em;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.dl-menuwrapper .dl-submenu .btn {
+    margin: 0;
+    padding: 4px 14px;
+    line-height: 20px;
+    background: transparent !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.92) !important;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.dl-menuwrapper .dl-submenu li > a:has(.btn) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 16px;
+    background: transparent !important;
+    border-bottom: none !important;
+    line-height: normal;
+}
+
+.dl-menuwrapper .dl-submenu li > a:has(.btn):hover,
+.dl-menuwrapper .dl-submenu li > a:has(.btn):focus {
+    background: transparent !important;
+}
+
+.dl-menuwrapper .dl-submenu .btn:hover,
+.dl-menuwrapper .dl-submenu li > a:has(.btn):hover .btn {
+    background: #fff !important;
+    color: #222 !important;
+    border-color: #fff !important;
+}
+
+/* Institution chips */
+.entry-content p.about-affiliations {
+    text-align: left;
+    line-height: 1.85;
+}
+
+.org {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.22em;
+    margin: 0 0.04em;
+    color: #c8102e;
+    font-weight: 650;
+    white-space: nowrap;
+    vertical-align: -0.18em;
+    line-height: 1;
+    text-decoration: none;
+    border-bottom: none !important;
+    transition: color 180ms ease, transform 160ms ease-out;
+}
+
+.org:visited {
+    color: #c8102e;
+}
+
+.org:hover,
+.org:focus {
+    color: #9a0c24;
+    border-bottom: none !important;
+}
+
+.org:active {
+    transform: scale(0.97);
+}
+
+.org img {
+    display: block;
+    width: 1.2em !important;
+    height: 1.2em !important;
+    max-width: 1.2em;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.software-project {
+    margin: 1.8em 0 0;
+    padding: 0 0 1.4em;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid #ececec;
+}
+
+.software-project:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.software-project-copy h3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.7em 1em;
+    margin: 0 0 0.3em;
+    font-size: 1.15em;
+}
+
+.software-project-copy h3 > a {
+    display: inline;
+    color: #222;
+    text-decoration: none;
+    border-bottom: none !important;
+}
+
+.software-project-copy h3 > a:hover,
+.software-project-copy h3 > a:focus {
+    color: #007bff;
+    border-bottom: none !important;
+}
+
+.repo-stats {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85em;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+    letter-spacing: 0;
+}
+
+.repo-stat {
+    color: #888;
+    font-variant-numeric: tabular-nums;
+}
+
+.repo-stat i {
+    margin-right: 0.32em;
+    font-size: 0.92em;
+}
+
+.software-project-copy p {
+    text-align: left;
+    margin: 0 0 0.45em;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.software-project-copy p:last-child {
+    margin-bottom: 0;
+}
+
+body#post-index.page-research #main,
+body#post-index.page-software #main {
+    max-width: 1080px;
+}
+
+#post-index .pub {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 285px minmax(0, 1fr);
+    gap: 16px 18px;
+    align-items: start;
+}
+
+#post-index .pub:not(:has(.pub-figure)) {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+#post-index .pub + .pub {
+    margin-top: 1.35em;
+    padding-top: 1.35em;
+    border-top: 1px solid #ececec;
+}
+
+#post-index article.hentry,
+#post-index .entry-content,
+#post-index .pub {
+    overflow: visible;
+}
+
+#post-index .pub-figure {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+    border-bottom: none !important;
+}
+
+#post-index .pub-figure img {
+    display: block;
+    width: 285px;
+    max-width: 100%;
+    height: auto;
+    /* Keep the hover target at its original size as the preview grows. */
+    pointer-events: none;
+    transform-origin: left center;
+    box-shadow: 4px 4px 8px #888888;
+    transition: transform 250ms cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+#post-index .pub:hover,
+#post-index .pub:has(.pub-figure.is-open) {
+    z-index: 20;
+}
+
+#post-index .pub-figure.is-open img {
+    /* Values are set on the image itself to keep the preview inside the viewport. */
+    transform: translate3d(var(--preview-x, 0px), var(--preview-y, 0px), 0)
+        scale(var(--preview-scale, 1)) perspective(900px) rotateY(8deg);
+    box-shadow: 12px 14px 32px rgba(34, 34, 34, 0.3);
+}
+
+#post-index .pub-figure.is-open {
+    cursor: zoom-out;
+}
+
+#post-index .pub-figure:focus-visible {
+    outline: 2px solid #1a5fb4;
+    outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #post-index .pub-figure img {
+        transition: none;
+    }
+
+    #post-index .pub-figure.is-open img {
+        transform: translate3d(var(--preview-x, 0px), var(--preview-y, 0px), 0)
+            scale(var(--preview-scale, 1));
+    }
+}
+
+#post-index .pub p {
+    margin: 0;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.45;
+    color: #222;
+}
+
+#post-index .pub-title {
+    margin-bottom: 0.2em;
+    font-weight: 700;
+}
+
+#post-index .pub-authors {
+    margin-bottom: 0.15em;
+}
+
+#post-index .pub-venue {
+    margin-bottom: 0.35em;
+    color: #444;
+    font-style: italic;
+}
+
+#post-index .pub-links {
+    font-size: 15px;
+}
+
+#post-index .entry-content .pub-links a {
+    color: #1a5fb4;
+    border-bottom: none !important;
+}
+
+#post-index .entry-content .pub-links a:hover,
+#post-index .entry-content .pub-links a:focus {
+    color: #0b3d91;
+    border-bottom: none !important;
+}
+
+@media only screen and (max-width: 520px) {
+    #post-index .pub {
+        grid-template-columns: 1fr;
+    }
+
+    #post-index .pub-figure img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+}
+
+.about-photo {
+    float: right;
+    width: 250px;
+    height: 250px;
+    margin: 0 0 20px 20px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    perspective: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-photo-inner {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 480ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.about-photo.is-flipped .about-photo-inner {
+    transform: rotateY(180deg);
+}
+
+.about-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.about-photo-back {
+    transform: rotateY(180deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .about-photo:hover .about-photo-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-photo-inner {
+        transition: none;
+    }
+}
+
+.about-news {
+    clear: both;
+}
+
+.latest-news {
+    clear: both;
+    list-style: none;
+    margin: 0.2em 0 0;
+    padding: 0 0.4rem 0 0;
+    max-height: 17.5rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.28) transparent;
+    scroll-padding-block: 0.35rem;
+}
+
+.latest-news.is-overflowing {
+    -webkit-mask-image: linear-gradient(#000 0, #000 calc(100% - 1.35rem), transparent 100%);
+    mask-image: linear-gradient(#000 0, #000 calc(100% - 1.35rem), transparent 100%);
+}
+
+.latest-news.is-scrolled {
+    -webkit-mask-image: linear-gradient(transparent 0, #000 1rem, #000 100%);
+    mask-image: linear-gradient(transparent 0, #000 1rem, #000 100%);
+}
+
+.latest-news.is-overflowing.is-scrolled {
+    -webkit-mask-image: linear-gradient(transparent 0, #000 1rem, #000 calc(100% - 1.35rem), transparent 100%);
+    mask-image: linear-gradient(transparent 0, #000 1rem, #000 calc(100% - 1.35rem), transparent 100%);
+}
+
+.latest-news::-webkit-scrollbar {
+    width: 8px;
+}
+
+.latest-news::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.22);
+    border-radius: 999px;
+}
+
+.latest-news:focus {
+    outline: none;
+}
+
+.latest-news:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.28);
+    outline-offset: 3px;
+}
+
+.latest-news li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75em;
+    margin: 0;
+    padding: 0.46em 0;
+    border-bottom: 1px solid #ececec;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #444;
+}
+
+.latest-news li:first-child {
+    padding-top: 0;
+}
+
+.latest-news li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.dl-menuwrapper .brand-icon,
+.social-icons .brand-icon {
+    display: inline-block;
+    fill: currentColor;
+    overflow: visible;
+}
+
+.dl-menuwrapper .brand-icon {
+    width: 1.2857142857em;
+    height: 1em;
+    vertical-align: -0.15em;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    line-height: 1;
+    border-bottom: none !important;
+}
+
+.social-icons .fa-2x {
+    font-size: 30px;
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.social-icons .brand-icon {
+    display: block;
+    width: 28px;
+    height: 28px;
+    vertical-align: top;
+}
+
+.wechat-qr {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.wechat-qr[hidden] {
+    display: none;
+}
+
+.wechat-qr-backdrop {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(17, 17, 17, 0.62);
+    cursor: pointer;
+}
+
+.wechat-qr-dialog {
+    position: relative;
+    margin: 0;
+    width: min(420px, 100%);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+}
+
+.wechat-qr-dialog img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.wechat-qr-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.94);
+    color: #222;
+    font-size: 22px;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.dl-menuwrapper li a.has-note {
+    line-height: 1.25;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.dl-menuwrapper .copy-note {
+    display: block;
+    margin: 1px 0 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+}
+
+.news-date {
+    flex: 0 0 5.15em;
+    color: #888;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Single post: cover image, title over the image, one content card */
+#post #main {
+    max-width: none;
+    padding-top: 0;
+}
+
+#post article.hentry {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+}
+
+#post .entry-header {
+    height: 400px;
+}
+
+#post .entry-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    min-height: 400px;
+}
+
+#post .entry-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 400px;
+}
+
+#post.feature .header-title {
+    z-index: 2;
+}
+
+/* Match the HPSTR post template: Lato, 16px, color #222, content line-height 1.625 */
+body#post,
+body#post h1,
+body#post h2,
+body#post h3,
+body#post h4,
+body#post h5,
+body#post h6 {
+    font-family: "Lato", Calibri, Arial, sans-serif;
+}
+
+body#post {
+    color: #222;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 14px 0 0;
+    font-family: "PingFang SC", "Noto Sans SC", "Hiragino Sans GB", "Microsoft YaHei", "Lato", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.lang-switch a {
+    color: inherit;
+    text-decoration: none;
+    padding: 4px 8px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+#post.feature .lang-switch a {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+#post.feature .lang-switch a[aria-current="true"] {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.9);
+}
+
+#post.feature .lang-switch a:hover,
+#post.feature .lang-switch a:focus {
+    color: #fff;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 15px;
+}
+
+.post-actions .btn {
+    margin-top: 0;
+}
+
+.lang-switch-inline {
+    margin: 0;
+}
+
+.lang-switch-inline a {
+    color: #888;
+}
+
+.lang-switch-inline a[aria-current="true"] {
+    color: #222;
+    border-color: #222;
+}
+
+.lang-switch-inline a:hover,
+.lang-switch-inline a:focus {
+    color: #222;
+}
+
+body#post.lang-zh,
+body#post.lang-zh h1,
+body#post.lang-zh h2,
+body#post.lang-zh h3,
+body#post.lang-zh h4,
+body#post.lang-zh h5,
+body#post.lang-zh h6 {
+    font-family: "PingFang SC", "Noto Sans SC", "Hiragino Sans GB", "Microsoft YaHei", "Lato", sans-serif;
+}
+
+body#post.lang-zh .entry-content {
+    line-height: 1.85;
+}

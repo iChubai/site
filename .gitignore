@@ -1,0 +1,7 @@
+# Local agent traces and operating-system files.
+.pi-traces/
+.DS_Store
+
+# Draft blog, still being revised.
+posts/ar-diffusion-video-world-models.html
+posts/ar-diffusion-video-world-models.zh.html
