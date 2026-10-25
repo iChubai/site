@@ -1,0 +1,22 @@
+/* The original gallery fills the viewport; only the site menu is overlaid. */
+html,
+body.page-gallery {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.gallery-original {
+    position: fixed;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.page-gallery .dl-menuwrapper {
+    z-index: 1000;
+}

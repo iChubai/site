@@ -2,6 +2,12 @@
 .pi-traces/
 .DS_Store
 
+# Local tests.
+/tests/
+
+# App build dependencies (the static output is committed).
+/app/**/node_modules/
+
 # Draft blog, still being revised.
 posts/ar-diffusion-video-world-models.html
 posts/ar-diffusion-video-world-models.zh.html
